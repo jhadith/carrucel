@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda de bebidas de Jhadith">
+  <title>Jhadith Store | Bebidas</title>
+  <link rel="stylesheet" href="./css/thumbelina.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery-4.0.0.min.js" defer></script>
+  <script src="./js/thumbelina.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#inicio"><span>Jhadith <strong>Store</strong></span></a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#productos">Productos</a><a href="#compra">Mi compra</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Tu bebida favorita, <span>siempre cerca.</span></h1>
+      </div>
+     
+    </section>
+
+    <section class="store-section" id="productos">
+      <div class="section-heading">
+        <div><span class="eyebrow">Catálogo Jhadith</span><h2>Elige tu bebida</h2></div>
+        <p>Haz clic en un producto para consultar sus detalles.</p>
+      </div>
+      <div class="product-showcase">
+        <div class="preview-card">
+          <span class="preview-label">Producto seleccionado</span>
+          <img src="./img/cocaCola.png" alt="Bebida seleccionada" id="big-img">
+          <p>Selecciona una miniatura para cambiar el producto.</p>
+        </div>
+        <div class="carousel-area">
+          <div id="slider" aria-label="Carrusel de bebidas">
+            <button class="thumbelina-but horiz left" type="button" aria-label="Producto anterior">&#10094;</button>
+            <ul>
+              <li><img src="./img/cocaCola.png" class="imgc selected" alt="cocaCola" onclick="imagenes(this)" id="img1"></li>
+              <li><img src="./img/fanta.png" class="imgc" alt="fanta" onclick="imagenes(this)" id="img2"></li>
+              <li><img src="./img/sprite.png" class="imgc" alt="sprit" onclick="imagenes(this)" id="img3"></li>
+              <li><img src="./img/pepsi.png" class="imgc" alt="pepsi" onclick="imagenes(this)" id="img4"></li>
+              <li><img src="./img/nestea.png" class="imgc" alt="nestea" onclick="imagenes(this)" id="img5"></li>
+            </ul>
+            <button class="thumbelina-but horiz right" type="button" aria-label="Producto siguiente">&#10095;</button>
+          </div>
+          <p class="carousel-help">Usa las flechas para descubrir más opciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="purchase-section" id="compra">
+      <div class="section-heading compact"><div><span class="eyebrow">Resumen del pedido</span><h2>Calcula tu compra</h2></div></div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Descripción</th><th>Valor unitario</th><th>Cantidad</th><th>Total</th></tr></thead>
+          <tbody><tr>
+            <td data-label="Descripción"><input type="text" id="descripcion" value="Coca-Cola clásica" disabled></td>
+            <td data-label="Valor unitario"><input type="text" id="valor" value="2.00" disabled></td>
+            <td data-label="Cantidad"><input type="number" id="cantidad" value="1" min="1"></td>
+            <td data-label="Total"><input type="text" id="total" value="$2.00" disabled></td>
+          </tr></tbody>
+        </table>
+      </div>
+      <div class="purchase-actions">
+        <div class="availability"><span>Disponibilidad:</span><img src="./img/amarillo.png" alt="Indicador uno" id="semaforo1"><img src="./img/rojo.png" alt="Indicador dos" id="semaforo2"><img src="./img/verde.png" alt="Indicador tres" id="semaforo3"></div>
+        <button id="boton" type="button" onclick="Multiplicar()">Calcular total</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand footer-brand"><span class="brand-icon">J</span><span>Jhadith Store</span></div>
+    <p>Productos para compartir, momentos para recordar.</p>
+    <small>&copy; 2026 Jhadith Store. Todos los derechos reservados.</small>
+  </footer>
+</body>
+</html>
+
+Carrito de compra, con los sliders, 
+tabla para agregar más productos, total,
+ guardar en la bd, formulario para factura 
